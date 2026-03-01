@@ -318,6 +318,10 @@ function App() {
         },
     };
 
+    const totalAmount = expenses.reduce((sum, exp) => {
+        return sum + exp.amnt;
+    }, 0);
+
     return (
         <div style={styles.page}>
             <div style={styles.card}>
@@ -348,6 +352,15 @@ function App() {
                         Add Expense
                     </button>
                 </div>
+
+                <div style = {{
+                    marginBottom: "15px",
+                    padding: "8px",
+                    backgroundColor: "#f0f0f0",
+                    borderRadius: "6px",
+                    textAlign: "right",
+                    fontWeight: "600"
+                }}>Total: ₹ {totalAmount}</div>
 
                 <div style={styles.list}>
                     {expenses.length === 0 ? (
