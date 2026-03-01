@@ -264,7 +264,8 @@ function App() {
         page: {
             color: "black",
             minHeight: "100vh",
-            backgroundColor: "#351d1d",
+            width: "100%",
+            background: "linear-gradient(135deg, #1f1f1f, #2c3e50)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
